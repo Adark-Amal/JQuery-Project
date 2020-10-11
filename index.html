@@ -9,20 +9,23 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-   <h1>Hot</h1>
-    <ul>
-        <li id="fire">Fire</li>
-        <li>Lava</li>
-        <li>Steam</li>
-    </ul>
-    <h1>Cold</h1>
-    <ul>
-        <li>Snow</li>
-        <li>Ice</li>
+   <div id="container">
+        <h1>Hot</h1>
         <ul>
-            <li>Heavy Rain</li>
-            <li>Light rain</li>
+            <li class="nonsolid" id="fire">Fire</li>
+            <li class="solid">Lava</li>
+            <li class="nonsolid">Steam</li>
         </ul>
-    </ul> 
+        <h1>Cold</h1>
+        <ul>
+            <li class="solid">Snow</li>
+            <li class="solid">Ice</li>
+            <li class="nonsolid">Rain</li>
+            <ul>
+                <li class="nonsolid">Heavy Rain</li>
+                <li class="nonsolid">Light rain</li>
+            </ul>
+        </ul>
+    </div>
 </body>
 </html>
