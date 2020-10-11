@@ -1,3 +1,3 @@
 $(document).ready(function () {
-  $('#container >>> .nonsolid').addClass('highlight');
+   $('#container input[placeholder=E-mail]').addClass('highlight');
 });
