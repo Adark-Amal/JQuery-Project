@@ -1,1 +1,3 @@
-console.log("Hello David");
+$(document).ready(function () {
+  $('#fire').addClass('highlight');
+});
