@@ -1,9 +1,7 @@
 $(document).ready(function () {
-  $('#container')
-  .find(".hot")
-  .children()
-  .first()
-  .next()
-  .prev()
-  .addClass("highlight");
+  $('.box').on('click', function () {
+    $('.box').addClass('highlight');
+  });
 });
+
+// You can use $(this).toggleClass('hightlight')
