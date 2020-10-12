@@ -4,6 +4,15 @@
     background-color: darkgreen;
 }
 
+.box-button {
+    background-color: royalblue;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .highlight {
     background-color: red;
 }
