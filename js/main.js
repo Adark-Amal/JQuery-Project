@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  $('.box').on('click', function () {
-    $('.box').addClass('highlight');
+  $('.box').on('click','.box-button', function () {
+    $(this).parent().toggleClass('highlight');
   });
 });
 
