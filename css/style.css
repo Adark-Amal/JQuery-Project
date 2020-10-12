@@ -1,7 +1,9 @@
-.highlight {
-    color: blue;
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: darkgreen;
 }
 
-.item {
-    margin-left: 8px;
+.highlight {
+    background-color: red;
 }
