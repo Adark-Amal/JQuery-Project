@@ -19,10 +19,10 @@ $(document).ready(function () {
     $('#container').prepend(html);
   });
   
-   $('#container').on('click', function(event) {
+   $('#container').on('click', '.more-info-link', function(event) {
     event.preventDefault();
 
-    $(this).parent().find('.more-info').toggle();
+    $(this).parent().find('.more-info').slideToggle('slow');
   });
 
   $('#container').on('click', '.item-remove', function() {
