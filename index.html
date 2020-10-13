@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +9,36 @@
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-  <div id="cart-container"> $0</div>
+    <div id="cart-container"> $0</div>
     <div id="user-data">
-        <label >Name</label>
-        <input type="text">
+        <form id="cart-form"  method="POST" action="data/cartSubmit.json">
+            <label>Name</label>
+            <input name="name" type="text">
+            <br>
+            <label>Email</label>
+            <input name="email" type="text">
+            <br>
+            <label>Newsletter?</label>
+            <input name="wantNewsletter" id="newsletter-checkbox" type="checkbox" checked>
+            <br>
+            <select name="newsLetterFrequency" id="newsletter-frequency">
+                <option>-</option>
+                <option selected>Weekly</option>
+                <option>Monthly</option>
+                <option>Yearly</option>
+            </select>
+            <br>
+            <br>
+            <button id="submit-cart">Submit</button>
+        </form>
         <br>
-        <label>Email</label>
-        <input type="text">
-        <br>
-        <label>Newsletter?</label>
-        <input id="newsletter-checkbox" type="checkbox" checked>
-        <br>
-        <select id="newsletter-frequency">
-            <option>-</option>
-            <option selected>Weekly</option>
-            <option>Monthly</option>
-            <option>Yearly</option>
-        </select>
+        <div id="feedback-message"></div>      
     </div>
     <div id="container">
         <br style="clear: left;" />
     </div>
 </body>
+
 </html>
