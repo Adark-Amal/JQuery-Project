@@ -1,0 +1,21 @@
+{
+    "items": [{
+        "name": "Labone",
+        "description": "Labone is a plce close to cantonment",
+        "price": 499,
+        "moreInfo": "It is such a peaceful environment"
+    },
+    {
+        "name": "Osu",
+        "description": "Osu is a place close to South La Estate",
+        "price": 599,
+        "moreInfo": "It has a vibrant community"
+    },
+    {
+        "name": "Sakumono",
+        "description": "Sakumono is a place close to Lashibi",
+        "price": 400,
+        "moreInfo": "Most of the people are quite friendly"
+    }
+]
+}
