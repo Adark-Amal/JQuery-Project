@@ -79,6 +79,20 @@ $(document).ready(function () {
       }
     });
     $('#newsletter-checkbox').trigger('change');
+
+    $('#cart-form').on('submit', function(event) {
+      event.preventDefault();
+
+      let data = {form: $(this).serialize(), price: cart};
+
+      $.ajax($(this).attr('action'), {
+        type: 'POST',
+        data: data,
+      })
+      .done(function(response) {
+        $('#feedback-message').text(response.message);
+      });
+    });
 });
 
 // You can use $(this).toggleClass('hightlight')
