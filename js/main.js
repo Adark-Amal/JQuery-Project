@@ -22,7 +22,10 @@ $(document).ready(function () {
    $('#container').on('click', '.more-info-link', function(event) {
     event.preventDefault();
 
-    $(this).parent().find('.more-info').slideToggle('slow');
+    $(this).parent().find('.more-info').slideToggle(100);
+    $(this)
+      .animate({"opacity": 0.5, "margin-left": 10}, 100)
+      .animate({"opacity": 1.0, "margin-left": 0}, 100)
   });
 
   $('#container').on('click', '.item-remove', function() {
