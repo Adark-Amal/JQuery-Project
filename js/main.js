@@ -12,11 +12,17 @@ $(document).ready(function () {
     html += '<button class="item-add">Add to Cart</button>';
     html += '<button class="item-remove">Remove</button>';
     html += '<br>';
-    html += '<a href="#">More info</a>';
+    html += '<a class="more-info-link" href="#">More info</a>';
     html += '<div class="more-info">Lorem ipsum dolor sit amet consectetur, omnis corporis id excepturi </div>';
     html += '</div>';
 
     $('#container').prepend(html);
+  });
+  
+   $('#container').on('click', function(event) {
+    event.preventDefault();
+
+    $(this).parent().find('.more-info').toggle();
   });
 
   $('#container').on('click', '.item-remove', function() {
