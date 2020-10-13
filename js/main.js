@@ -70,6 +70,15 @@ $(document).ready(function () {
         }
       });
     });
+
+    $('#newsletter-checkbox').on('change', function() {
+      if ($(this).is(':checked')){
+        $('#newsletter-frequency').fadeIn();
+      } else {
+        $('#newsletter-frequency').fadeOut();
+      }
+    });
+    $('#newsletter-checkbox').trigger('change');
 });
 
 // You can use $(this).toggleClass('hightlight')
