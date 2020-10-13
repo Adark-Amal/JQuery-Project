@@ -1,6 +1,8 @@
-function addItem(name, description, price, moreInfo){
+var cart = 0;
+
+function addItem(id, name, description, price, moreInfo){
   let html = '';
-  html += '<div class="item">';
+  html += '<div class="item" data-id="' + id + '">';
   html += '<div class="name">' + name + '</div>';
   html += '<img src="assets/image.webp" alt="Image">';
   html += '<div class="description">' + description + '</div>';
@@ -38,7 +40,7 @@ $(document).ready(function () {
     .done(function(response){
       let items = response.items;
       items.forEach(function(item){
-        addItem(item.name, item.description, 
+        addItem(item.id, item.name, item.description, 
           item.price, item.moreInfo);
       });
     })
@@ -49,6 +51,25 @@ $(document).ready(function () {
 
     .always(function(){
 
-    })
+    });
+
+    $('#container').on('click', '.item-add', function() {
+      let id = $(this).parent().data('id');
+      $.ajax('data/addToCart.json', {
+        type: 'POST',
+        data: {id: id},
+        dataType: 'json',
+        contentType: 'application/json'
+      })
+      .done(function(response) {
+        if(response.message === 'success'){
+          let price = response.price;
+          cart += price;
+
+          $('#cart-container').text('$' + cart);
+        }
+      });
+    });
 });
+
 // You can use $(this).toggleClass('hightlight')
